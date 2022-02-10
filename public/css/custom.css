@@ -1,0 +1,249 @@
+/*
+| style for v-cloak vuejs directive
+|
+*/
+[v-cloak] {
+  display:none;
+}
+
+/*
+| custom style for elements
+|
+*/
+textarea{
+  height: 140px !important;
+  resize:none;
+}
+
+/*
+| style for loading-page
+|
+*/
+
+.loading-page {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .3s ease;
+}
+
+/*
+| custom style for upload file preview
+|
+*/
+
+.form-image-container{
+  width: 100%;
+  min-height:280px;
+  background:#e7e7e7;
+}
+
+.form-image-container img{
+  width: 100%;
+  min-height:280px;
+  max-height:400px;
+}
+
+/*
+| custom style for login page
+|
+*/
+
+.login-logo img{
+  width: 100%;
+  max-width: 350px;
+}
+
+
+.login-page{
+  background: #fff;
+}
+
+.login-box-body{
+  border: 1px solid #d2d6de;
+}
+
+/*
+| custom style for photo album
+|
+*/
+.album-photo{
+  position: relative;
+  display: inline-block;
+}
+
+.album-photo img:hover{
+  opacity: 0.9;
+}
+
+.album-photo .delete-button{
+  position: absolute;
+  right: 0;
+  top:0;
+  padding-top: 7px;
+  padding-right: 7px;
+  display: none;
+}
+
+.album-photo:hover .delete-button{
+  display:block;
+}
+/*
+| custom style for nabvar top logo
+|
+*/
+
+.main-header .logo .logo-lg img{
+  width: 120px;
+}
+
+/*
+| custom style for pagination
+|
+*/
+
+.pagination > li > span{
+  background-color: #033779 !important;
+  border-color: #033779 !important;
+}
+
+/*
+| custom style for .dropdown-menu and .dropdown-toggle
+| on table responsive case
+|
+*/
+
+@media (max-width: 767px) {
+  .table-responsive .dropdown-menu,
+  .table-responsive .dropdown-toggle {
+        position: static !important;
+  }
+}
+
+@media (min-width: 768px) {
+    .table-responsive {
+        overflow: visible;
+    }
+}
+
+/*
+| custom style for v-select component
+|
+*/
+
+.v-select .selected-tag{
+  background: #033779 !important;
+  border:1px solid #033779 !important;
+  color:#fff !important;
+  font-weight:bold;
+  overflow: hidden;
+}
+
+.v-select .selected-tag .close{
+  color:#e9e9e9 !important;
+}
+
+.v-select .dropdown-menu .active > a {
+  color: #fff !important;
+  background: #d2d3d5 !important;
+}
+
+.v-select .dropdown-menu > .highlight > a {
+  background: #033779 !important;
+  color: #fff !important;
+}
+
+
+/*
+| custom style for vue-checkbox-radio plugin
+|
+*/
+
+.checkbox-component > input + label > .input-box,
+.radio-component > input + label > .input-box {
+  border-color: #033779 !important;
+  background: #033779 !important;
+  box-shadow: none !important;
+}
+
+.checkbox-component > input + label > .input-box > .input-box-tick > path {
+  stroke: #fff !important;
+  background: #033779 !important;
+}
+
+.radio-component > input + label > .input-box > .input-box-circle {
+  background: #fff !important;
+}
+
+/*
+| custom style for autocomplete
+|
+*/
+
+.autocomplete{
+  position: relative;
+  z-index: 9000;
+}
+
+.autocomplete .list-group .list-group-item:hover{
+  background: #033779;
+  color:#fff;
+}
+
+/*
+| custom style for modal
+|
+*/
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .3s ease;
+}
+
+
+.modal-wrapper {
+  display: table-cell;
+}
+
+/*
+| custom style for datepicker
+|
+*/
+
+.vdp-datepicker__calendar .input-date{
+  background: #fff !important;
+}
+
+.vdp-datepicker__calendar .cell:hover{
+  border: 1px solid #033779 !important;
+}
+
+.vdp-datepicker__calendar .selected{
+  background: #033779 !important;
+  color: #fff !important;
+}
+
+/*
+| custom style for modal-dialog-photos
+| on responsives cases
+|
+*/
+
+@media (min-width: 1024px) {
+    .modal-dialog-photos {
+      width: 100% !important;
+      max-width: 960px !important;
+    }
+}
