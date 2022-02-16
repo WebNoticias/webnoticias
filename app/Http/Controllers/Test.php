@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Mail\NewsletterSuscribe;
+use App\Http\Requests\StoreNewsletter;
+use App\Http\Requests\UpdateNewsletter;
+use Illuminate\Support\Facades\Mail;
+use App\Models\Newsletter;
+use App\Models\Group;
 class Test extends Controller
 {
     /**
