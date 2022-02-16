@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-
+use stdClass;
 class NewsletterSuscribe extends Mailable
 {
     use Queueable, SerializesModels;
@@ -33,7 +33,11 @@ class NewsletterSuscribe extends Mailable
      */
     public function build()
     {
-         return  $this->from('webnoticiasdev@gmail.com', 'Web Noticias ')
+
+        $this->city = new stdClass();
+        $this->city->name = 'Cali';
+
+         return  $this->from('webnoticiasdev@gmail.com', 'Web Noticias '.$this->city->name)
                       ->subject('Suscripción - Boletín informativo')
                       ->markdown('emails.newsletter.suscribe');
     }
