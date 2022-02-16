@@ -1,4 +1,4 @@
-@component('mail::message', ['city' => $city])
+{{-- @component('mail::message', ['city' => $city])
 # Boletín de noticias
 
 Has recibido este correo electrónico por que te has suscrito al boletín informativo de **Web Noticias {{ $city->name }}**, utiliza el siguiente enlace para confirmar tu suscripción
@@ -12,3 +12,6 @@ Confirmar Subscripción
 @endcomponent
 
 @endcomponent
+ --}}
+
+Enviando mail
