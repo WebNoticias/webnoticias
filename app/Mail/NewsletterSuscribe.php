@@ -34,8 +34,7 @@ class NewsletterSuscribe extends Mailable
     public function build()
     {
 
-        $this->city = new stdClass();
-        $this->city->name = 'Cali';
+       
 
          return  $this->from('webnoticiasdev@gmail.com', 'Web Noticias '.$this->city->name)
                       ->subject('Suscripción - Boletín informativo')
