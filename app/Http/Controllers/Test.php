@@ -25,8 +25,8 @@ class Test extends Controller
         $group =  Group::find(decodeid('pL9A2vJBxLa6DdeR3EX1'));
         $token = null;
         $frequency = 2;
-        Mail::to($email)->send(new NewsletterSuscribe($group, $token, $email, $frequency));
-
+        $m = Mail::to($email)->send(new NewsletterSuscribe($group, $token, $email, $frequency));
+        dd($m);
         return "enviado";
     }
 
