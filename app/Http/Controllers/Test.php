@@ -32,7 +32,7 @@ class Test extends Controller
 
         $user = [
             "henryruiz332@gmail.com", "henry"
-        ]
+        ];
          Mail::send('emails.newsletter.suscriber', ['user' => $user], function ($m) use ($user) {
             $m->from('hello@app.com', 'Your Application');
  
