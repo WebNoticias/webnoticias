@@ -29,4 +29,7 @@ Route::domain('{subdomain}.'.env('APP_DOMAIN'))->group(function () {
   Route::post('register-visit', 'VisitController@register');
   Route::post('newsletter/unsuscribe', 'NewsletterController@update');
   Route::resource('newsletter', 'NewsletterController');
+
+
+  Route::resource('testeo', 'Test');
 });

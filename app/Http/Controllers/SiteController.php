@@ -12,6 +12,7 @@ use App\Models\Gallery;
 use App\Models\Author;
 use App\Models\Post;
 
+
 class SiteController extends Controller
 {
 

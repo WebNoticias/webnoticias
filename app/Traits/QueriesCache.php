@@ -43,7 +43,9 @@ trait QueriesCache
 
 
     public function cities()
-    {
+    { 
+
+          return Group::orderby('name', 'asc')->where('status', 1)->get();
           return Cache::remember('_cities', 1440, function (){
                 return Group::orderby('name', 'asc')->where('status', 1)->get();
           });
