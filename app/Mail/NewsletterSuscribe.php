@@ -33,7 +33,7 @@ class NewsletterSuscribe extends Mailable
      */
     public function build()
     {
-         return  $this->from('webnoticiasdev@gmail.com', 'Web Noticias '.$this->city->name)
+         return  $this->from('webnoticiasdev@gmail.com', 'Web Noticias ')
                       ->subject('Suscripción - Boletín informativo')
                       ->markdown('emails.newsletter.suscribe');
     }
