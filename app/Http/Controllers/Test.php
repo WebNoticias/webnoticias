@@ -22,12 +22,24 @@ class Test extends Controller
         $email = "henryruiz332@gmail.com";
         
 
-        $group =  Group::find(decodeid('pL9A2vJBxLa6DdeR3EX1'));
-        $token = null;
-        $frequency = 2;
-        $m = Mail::to($email)->send(new NewsletterSuscribe($group, $token, $email, $frequency));
-        dd($m);
-        return "enviado";
+        // $group =  Group::find(decodeid('pL9A2vJBxLa6DdeR3EX1'));
+        // $token = null;
+        // $frequency = 2;
+        // $m = Mail::to($email)->send(new NewsletterSuscribe($group, $token, $email, $frequency));
+        // dd($m);
+        // return "enviado";
+
+
+        $user = [
+            "henryruiz332@gmail.com", "henry"
+        ]
+         Mail::send('emails.newsletter.suscriber', ['user' => $user], function ($m) use ($user) {
+            $m->from('hello@app.com', 'Your Application');
+ 
+            $m->to($user[0], $user[1])->subject('Your Reminder!');
+        });
+
+         return "enviado";
     }
 
     /**
